@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather Matters</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/4bb2be9629.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="weatherapp">
+        <h1><i class="fas fa-cloud-sun"></i>WeatherMatters</h1>
+        <form class="search" id="search-form">
+          <input type="text" placeholder="search city" autofocus="on" autocomplete="off" id="city-input" />
+          <input type="submit" value="🔍" />
+        </form>
+        <br /><br />
+
+        <div class="row">
+          <div class="col-md">
+            <header class="cur-temp">
+              <br />
+              <i class="fas fa-cloud-moon"></i>
+              <br />
+              <span id="cur-temp">82</span><span id="imperial">ºF</span>
+              <br />
+              <span><small>Real Feel <span id="real-feel">85</span>ºF</small></span>
+              <br />
+              <span id="cur-weather">Mostly Cloudy</span>
+            </header>
+          </div>
+          <div class="col-md">
+            <header class="today">
+              <br />
+              <span id="cur-city">New York, NY</span>
+              <br />
+              <span id="cur-date"> </span>
+              <br />
+              <span id="cur-time"> <small></span>
+              <hr />
+              <ul class="cur-details">
+                <li>Highs: <span id="highs">91</span>ºF</li>
+                <li>Lows: <span id="lows">78</span>ºF</li>
+                <li>Humidity: <span id="humidity">62</span>%</li>
+                <li>Wind: <span id="wind">5</span>mph</li>
+                
+                
+              </ul>
+            </header>
+          </div>
+        </div>
+      </div>
+      <br />
+      <section class="weekly-forecast">
+        <div class="row">
+          <div class="col-2">
+            <span id="tues"
+              >Tues
+              <br />
+              <i class="fas fa-cloud-sun-rain"></i>
+              <br />
+              <small>77ºF / 70ºF</small>
+            </span>
+          </div>
+          <div class="col-2">
+            <span id="wed"
+              >Wed
+              <br />
+              <i class="fas fa-cloud-showers-heavy"></i>
+              <br />
+              <small>79ºF / 73ºF</small>
+            </span>
+          </div>
+          <div class="col-2">
+            <span id="thurs"
+              >Thurs
+              <br />
+              <i class="fas fa-cloud-sun"></i>
+              <br />
+              <small>86ºF / 74ºF</small>
+            </span>
+          </div>
+          <div class="col-2">
+            <span id="fri"
+              >Fri
+              <br />
+              <i class="fas fa-sun"></i>
+              <br />
+              <small>85ºF / 63ºF</small>
+            </span>
+          </div>
+          <div class="col-2">
+            <span id="sat"
+              >Sat
+              <br />
+              <i class="fas fa-cloud-sun"></i>
+              <br />
+              <small>78ºF / 63ºF</small>
+            </span>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

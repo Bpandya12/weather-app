@@ -1,0 +1,106 @@
+h1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  color: #6a8fda;
+  letter-spacing: 1px;
+  font-family: "Abel", sans-serif;
+}
+h1 i {
+  color: whitesmoke;
+}
+
+header i {
+  color: white;
+  font-size: 32px;
+}
+
+ul {
+  list-style: none;
+  font-size: 14px;
+  font-style: italic;
+  color: gray;
+
+  padding: 0;
+}
+
+hr {
+  margin: 10px;
+}
+
+.container {
+  border: 1px solid;
+  border-radius: 20px;
+  border-color: lightblue;
+  padding: 20px;
+  margin: 20px auto;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  font-family: "PT Sans", sans-serif;
+}
+
+.search {
+  margin-top: 20px;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+}
+
+.cur-temp {
+  border: 2px solid#7DB6DF;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+#cur-temp {
+  font-weight: bolder;
+  font-size: 28px;
+  text-align: center;
+  color: #6a8fda;
+}
+#imperial {
+  font-weight: bolder;
+  font-size: 28px;
+  text-align: center;
+  color: #6a8fda;
+}
+
+#cur-weather {
+  font-size: 15px;
+}
+
+.today {
+  border: 2px solid #7db6df;
+  border-radius: 10px;
+  width: 220px;
+  padding: 0;
+  text-align: center;
+  line-height: normal;
+}
+
+#cur-date {
+  font-weight: bold;
+  color: #6a8fda;
+}
+
+.weekly-forecast {
+  padding: 15px 20px 20px;
+  text-align: center;
+  position: relative;
+  left: 50px;
+}
+
+.weekly-forecast i {
+  font-size: 28px;
+  color: lightslategray;
+  margin-top: 5px;
+}
+
+.col-2 {
+  border: 1px solid #7db6df;
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 5px;
+}
