@@ -32,8 +32,8 @@ hr {
   border: 1px solid;
   border-radius: 20px;
   border-color: lightblue;
-  padding: 20px;
-  margin: 20px auto;
+  padding: 150px;
+  margin: 150px auto;
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   font-family: "PT Sans", sans-serif;
 }
