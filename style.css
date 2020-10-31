@@ -92,7 +92,7 @@ hr {
   left: 50px;
 }
 
-.weekly-forecast i {
+.weekly-forecast {
   font-size: 28px;
   color: lightslategray;
   margin-top: 5px;
@@ -107,4 +107,5 @@ hr {
 
 .open-source {
   text-align: center;
+  position: center;
 }
