@@ -32,7 +32,7 @@ hr {
   border-radius: 20px;
   border-color: lightblue;
   padding: 10px;
-  margin: 45px 45px 45px 0px;
+  margin: 45px 45px 0px 45px;
   max-width: 850px;
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   font-family: "PT Sans", sans-serif;
@@ -93,7 +93,7 @@ hr {
 }
 
 .weekly-forecast {
-  font-size: 28px;
+  font-size: 16px;
   color: lightslategray;
   margin-top: 5px;
 }
@@ -108,4 +108,5 @@ hr {
 .open-source {
   text-align: center;
   display: block;
+  margin: 10px auto;
 }
