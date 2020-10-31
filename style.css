@@ -20,7 +20,6 @@ ul {
   font-size: 14px;
   font-style: italic;
   color: gray;
-
   padding: 0;
 }
 
@@ -33,7 +32,7 @@ hr {
   border-radius: 20px;
   border-color: lightblue;
   padding: 10px;
-  margin: 45px auto;
+  margin: 45px 45px 45px 0px;
   max-width: 850px;
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   font-family: "PT Sans", sans-serif;
@@ -43,7 +42,6 @@ hr {
   margin-top: 20px;
   text-align: center;
   font-family: "PT Sans", sans-serif;
-  color: #bce3f7;
 }
 
 .cur-temp {
@@ -52,7 +50,7 @@ hr {
   width: 200px;
   height: 200px;
   margin: 0 auto;
-  position: relative;
+  position: center;
   text-align: center;
 }
 
@@ -109,5 +107,4 @@ hr {
 
 .open-source {
   text-align: center;
-  margin: 20px auto;
 }
