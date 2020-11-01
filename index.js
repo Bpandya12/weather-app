@@ -48,7 +48,7 @@ function displayWeatherCondition(response) {
     response.data.main.feels_like
   );
   document.querySelector("#cur-weather").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
 }
 
 function search(event) {
