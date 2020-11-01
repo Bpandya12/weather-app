@@ -51,13 +51,19 @@ function displayWeatherCondition(response) {
     response.data.weather[0].description;
 }
 
-function search(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city-input").value;
+function search(city) {
   let apiKey = "186f6315f68cbe651e86a1d50fb37cb3";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-input").value;
+  search(city);
+}
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
+
+search("New York");
