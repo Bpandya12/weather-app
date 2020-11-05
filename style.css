@@ -73,6 +73,7 @@ hr {
   height: 200px;
   margin: 0 auto;
   text-align: center;
+  align-items: center;
 }
 
 #cur-temp {
@@ -105,6 +106,7 @@ hr {
   padding: 0px;
   text-align: center;
   line-height: normal;
+  align-items: center;
 }
 
 #cur-date {
