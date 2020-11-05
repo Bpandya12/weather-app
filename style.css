@@ -15,10 +15,22 @@ header i {
   font-size: 32px;
 }
 #units {
-  text-align: right;
-  position: relative;
-  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 18px;
+  padding: 5px;
 }
+
+h {
+  text-align: center;
+  color: #6a8fda;
+  letter-spacing: 1px;
+  font-family: "Abel", sans-serif;
+  font-size: 18px;
+  display: block;
+}
+
 ul {
   list-style: none;
   font-size: 14px;
@@ -38,7 +50,7 @@ hr {
   padding: 10px;
   margin: 25px 25px 0px 25px;
   width: 620px;
-  height: 520px;
+  height: 750px;
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   font-family: "PT Sans", sans-serif;
 }
@@ -60,7 +72,6 @@ hr {
   width: 200px;
   height: 200px;
   margin: 0 auto;
-
   text-align: center;
 }
 
@@ -101,7 +112,7 @@ hr {
   color: #6a8fda;
 }
 
-.weekly-forecast {
+#hourly-forecast {
   padding: 15px 20px 20px;
   text-align: center;
   position: relative;
@@ -109,7 +120,21 @@ hr {
   font-size: 14px;
 }
 
-.weekly-forecast i {
+#hourly-forecast i {
+  font-size: 28px;
+  color: lightslategray;
+  margin-top: 5px;
+}
+
+#weekly-forecast {
+  padding: 15px 20px 20px;
+  text-align: center;
+  position: relative;
+  left: 50px;
+  font-size: 14px;
+}
+
+#weekly-forecast i {
   font-size: 28px;
   color: lightslategray;
   margin-top: 5px;
