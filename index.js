@@ -68,15 +68,14 @@ function displayHourlyForecast(response) {
         <br />
         <i class="fas fa-cloud-sun-rain"></i>
         <br />
-        <small>${Math.round(forecast.main.temp_max)}ºF / ${Math.round(
+        <small>${Math.round(forecast.main.temp_max)}º / ${Math.round(
     forecast.main.temp_min
-  )}ºF</small>  
+  )}º</small>  
       </span>
     </div>
   `;
-
-  console.log();
 }
+
 function search(city) {
   let apiKey = "186f6315f68cbe651e86a1d50fb37cb3";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
