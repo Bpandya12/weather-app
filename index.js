@@ -68,8 +68,8 @@ function displayHourlyForecast(response) {
         <br />
         <i class="fas fa-cloud-sun-rain"></i>
         <br />
-        <small>${Math.round(forecast.main.temp_max)}º / ${Math.round(
-    forecast.main.temp_min
+        <small>${Math.round(hourly.main.temp_max)}º / ${Math.round(
+    hourly.main.temp_min
   )}º</small>  
       </span>
     </div>
