@@ -61,16 +61,6 @@ function displayWeatherCondition(response) {
 function displayHourlyForecast(response) {
   console.log(response.data);
   let forecastElement = document.querySelector("#hourly");
-
-  forecastElement.innerHTML = `
-        < div class="col-2 centered" >
-            <span>12:00
-            <br />
-                <i class="fas fa-cloud-sun-rain"></i>
-                <br />
-                <small>ºF / ºF</small>
-            </span>
-    </div >`;
 }
 function search(city) {
   let apiKey = "186f6315f68cbe651e86a1d50fb37cb3";
