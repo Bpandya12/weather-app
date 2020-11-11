@@ -57,11 +57,29 @@ function displayWeatherCondition(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+// hourly forecast call
+function displayHourlyForecast(response) {
+  console.log(response.data);
+  let forecastElement = document.querySelector("#hourly");
 
+  forecastElement.innerHTML = `
+        < div class="col-2 centered" >
+            <span>12:00
+            <br />
+                <i class="fas fa-cloud-sun-rain"></i>
+                <br />
+                <small>ºF / ºF</small>
+            </span>
+    </div >`;
+}
 function search(city) {
   let apiKey = "186f6315f68cbe651e86a1d50fb37cb3";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayWeatherCondition);
+  // hourly forecast API
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`;
+
+  axios.get(apiUrl).then(displayHourlyForecast);
 }
 
 function handleSubmit(event) {
