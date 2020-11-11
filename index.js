@@ -66,7 +66,9 @@ function displayHourlyForecast(response) {
     <div class="col-2 centered">
       <span id="time">12:00
         <br />
-        <i class="fas fa-cloud-sun-rain"></i>
+        <img src="http://openweathermap.org/img/wn/${
+          hourly.weather[0].icon
+        }@2x.png}"/>
         <br />
         <small>${Math.round(hourly.main.temp_max)}º / ${Math.round(
     hourly.main.temp_min
