@@ -59,7 +59,7 @@ function displayWeatherCondition(response) {
 }
 // hourly forecast call
 function displayHourlyForecast(response) {
-  let hourlyElement = document.querySelector("hourly");
+  let hourlyElement = document.querySelector("#hourly");
   let hourly = response.data.list[0];
 
   hourlyElement.innerHTML = `
