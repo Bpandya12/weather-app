@@ -56,7 +56,7 @@ function displayWeatherCondition(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-//format hours
+//format hours for current and hourly times
 function formatHours(timestamp) {
   let hours = currentTime.getHours();
   let minutes = currentTime.getMinutes();
@@ -68,9 +68,12 @@ function formatHours(timestamp) {
 // hourly forecast call
 function displayHourlyForecast(response) {
   let hourlyElement = document.querySelector("#hourly");
-  let hourly = response.data.list[0];
+  let hourlyElement.innerHTML = null;
+  let hourly = null;
 
-  hourlyElement.innerHTML = `
+  for (let index = 0; index < 6; index++) {
+    hourly = response.data.list[index];
+    hourlyElement.innerHTML += `
     <div class="col-2 centered">
       <span id="time"> ${formatHours(hourly.dt * 1000)}
         <br />
@@ -78,12 +81,13 @@ function displayHourlyForecast(response) {
           hourly.weather[0].icon
         }@2x.png}"/>
         <br />
-        <small>${Math.round(hourly.main.temp_max)}º / ${Math.round(
-    hourly.main.temp_min
-  )}º</small>  
+        <small><strong>${Math.round(
+          hourly.main.temp_max
+        )}º<strong> / ${Math.round(hourly.main.temp_min)}º</small>  
       </span>
     </div>
   `;
+  }
 }
 
 function search(city) {
