@@ -1,12 +1,11 @@
-let curTimeElement = document.querySelector("#cur-time");
-let currentTime = new Date();
-let hours = currentTime.getHours();
-let minutes = currentTime.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
+function formatTime(timestamp) {
+  return `${formatHours(timestamp)}`;
 }
 
-curTimeElement.innerHTML = `${hours}:${minutes}`;
+let curTimeElement = document.querySelector("#cur-time");
+let currentTime = new Date();
+
+curTimeElement.innerHTML = formatTime(currentTime);
 
 let curDateElement = document.querySelector("#cur-date");
 let currentDate = new Date();
@@ -57,6 +56,15 @@ function displayWeatherCondition(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+//format hours
+function formatHours(timestamp) {
+  let hours = currentTime.getHours();
+  let minutes = currentTime.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
 // hourly forecast call
 function displayHourlyForecast(response) {
   let hourlyElement = document.querySelector("#hourly");
@@ -64,7 +72,7 @@ function displayHourlyForecast(response) {
 
   hourlyElement.innerHTML = `
     <div class="col-2 centered">
-      <span id="time">12:00
+      <span id="time"> ${formatHours(hourly.dt * 1000)}
         <br />
         <img src="http://openweathermap.org/img/wn/${
           hourly.weather[0].icon
