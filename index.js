@@ -58,8 +58,12 @@ function displayWeatherCondition(response) {
 }
 //format hours for current and hourly times
 function formatHours(timestamp) {
-  let hours = currentTime.getHours();
-  let minutes = currentTime.getMinutes();
+  let date = newDate(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -68,7 +72,7 @@ function formatHours(timestamp) {
 // hourly forecast call
 function displayHourlyForecast(response) {
   let hourlyElement = document.querySelector("#hourly");
-
+  hourlyElement.innerHTML = "";
   let hourly = null;
 
   for (let index = 0; index < 6; index++) {
@@ -79,11 +83,11 @@ function displayHourlyForecast(response) {
         <br />
         <img src="http://openweathermap.org/img/wn/${
           hourly.weather[0].icon
-        }@2x.png}"/>
+        }@2x.png"/>
         <br />
-        <small><strong>${Math.round(
-          hourly.main.temp_max
-        )}º<strong> / ${Math.round(hourly.main.temp_min)}º</small>  
+        <small>${Math.round(hourly.main.temp_max)}º / ${Math.round(
+      hourly.main.temp_min
+    )}º</small>  
       </span>
     </div>
   `;
