@@ -68,7 +68,7 @@ function formatHours(timestamp) {
 // hourly forecast call
 function displayHourlyForecast(response) {
   let hourlyElement = document.querySelector("#hourly");
-  let hourlyElement.innerHTML = null;
+  let hourlyElement.innerHTML = null; 
   let hourly = null;
 
   for (let index = 0; index < 6; index++) {
