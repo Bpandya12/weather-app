@@ -79,7 +79,6 @@ function displayHourlyForecast(response) {
     hourly = response.data.list[index];
     hourlyElement.innerHTML += `
     <div class="col-2">
-      
     <span id="time"> ${formatHours(hourly.dt * 1000)}
         <br />
         <img src="http://openweathermap.org/img/wn/${
