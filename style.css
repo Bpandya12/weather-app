@@ -112,7 +112,7 @@ hr {
 #hourly {
   padding: 15px 20px 20px;
   text-align: center;
-  display: block;
+  display: inline;
   left: 50px;
   font-size: 14px;
 }

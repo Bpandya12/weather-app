@@ -58,7 +58,7 @@ function displayWeatherCondition(response) {
 }
 //format hours for current and hourly times
 function formatHours(timestamp) {
-  let date = newDate(timestamp);
+  let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -78,8 +78,9 @@ function displayHourlyForecast(response) {
   for (let index = 0; index < 6; index++) {
     hourly = response.data.list[index];
     hourlyElement.innerHTML += `
-    <div class="col-2 centered">
-      <span id="time"> ${formatHours(hourly.dt * 1000)}
+    <div class="col-2">
+      
+    <span id="time"> ${formatHours(hourly.dt * 1000)}
         <br />
         <img src="http://openweathermap.org/img/wn/${
           hourly.weather[0].icon
