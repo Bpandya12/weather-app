@@ -115,10 +115,9 @@ function handleSubmit(event) {
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
-  let celsiusTemperature = (fahrenheitTemperature−32) * 5/9;
+  let celsiusTemperature = Math.round(((fahrenheitTemperature - 32) * 5) / 9);
   let curTempElement = document.querySelector("#cur-temp");
   curTempElement.innerHTML = Math.round(celsiusTemperature);
-  
 }
 
 function displayFahrenheitTemperature(event) {
@@ -126,8 +125,6 @@ function displayFahrenheitTemperature(event) {
   let curTempElement = document.querySelector("#cur-temp");
   curTempElement.innerHTML = Math.round(fahrenheitTemperature);
 }
-
-
 
 let fahrenheitTemperature = null;
 
@@ -137,7 +134,7 @@ searchForm.addEventListener("submit", handleSubmit);
 let celsiuslink = document.querySelector("#celsius-link");
 celsiuslink.addEventListener("click", displayCelsiusTemperature);
 
-let fahrenheitlink= document.querySelector("#fahrenheit-link")
+let fahrenheitlink = document.querySelector("#fahrenheit-link");
 fahrenheitlink.addEventListener("click", displayFahrenheitTemperature);
 
 search("New York");
