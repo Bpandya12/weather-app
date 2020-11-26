@@ -32,21 +32,35 @@
   <body>
     <div class="container">
       <div class="weatherapp">
-        <h1><i class="fas fa-cloud-sun"></i>WeatherMatters
-        <span id="units">ºC | ºF</span></h1>
+        <h1>
+          <i class="fas fa-cloud-sun"></i>WeatherMatters
+          <span id="units">ºC | ºF</span>
+        </h1>
         <form class="search" id="search-form">
-          <input type="text" placeholder="search city..." autofocus="on" autocomplete="off" id="city-input" />
+          <input
+            type="text"
+            placeholder="search city..."
+            autofocus="on"
+            autocomplete="off"
+            id="city-input"
+          />
           <input type="submit" value="🔍" />
         </form>
         <br /><br />
         <div class="row">
           <div class="col-6">
             <header class="cur-temp">
-              <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="Clear" id="icon">
-             <br />
-              <span id="cur-temp"></span><span id="imperial">ºF</span>
+              <img
+                src="http://openweathermap.org/img/wn/01n@2x.png"
+                alt="Clear"
+                id="icon"
+              />
               <br />
-              <span><small>Real Feel <span id="real-feel"></span>ºF</small></span>
+              <span id="cur-temp"></span><span id="imperial">º</span>
+              <br />
+              <span
+                ><small>Real Feel <span id="real-feel"></span>º</small></span
+              >
               <br />
               <span id="cur-weather"></span>
             </header>
@@ -58,11 +72,11 @@
               <br />
               <span id="cur-date"> </span>
               <br />
-              <span id="cur-time"> <small></span>
+              <span id="cur-time"> </span>
               <hr />
               <ul class="cur-details">
-                <li>Highs: <span id="highs"></span>ºF</li>
-                <li>Lows: <span id="lows"></span>ºF</li>
+                <li>Highs: <span id="highs"></span>º</li>
+                <li>Lows: <span id="lows"></span>º</li>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span>mph</li>
               </ul>
@@ -74,14 +88,15 @@
       <br />
       <section>
         <h>Next 3-Hour Forecast</h>
-         <div class="row" id="hourly">
-          </div> 
+        <div class="row" id="hourly"></div>
       </section>
       <br />
-      
     </div>
     <div class="open-source">
-        <a href="https://github.com/Bpandya12/weather-app" target="blank">Open-source code </a> by Bejal Pandya
+      <a href="https://github.com/Bpandya12/weather-app" target="blank"
+        >Open-source code
+      </a>
+      by Bejal Pandya
     </div>
     <script src="index.js"></script>
   </body>

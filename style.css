@@ -50,7 +50,7 @@ hr {
   padding: 10px;
   margin: 25px 25px 0px 25px;
   width: 620px;
-  height: 750px;
+  height: 620px;
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   font-family: "PT Sans", sans-serif;
 }
@@ -59,6 +59,7 @@ hr {
   margin-top: 20px;
   text-align: center;
   font-family: "PT Sans", sans-serif;
+  color: #6a8fda;
 }
 
 .row {
@@ -69,17 +70,16 @@ hr {
 .cur-temp {
   border: 2px solid#7DB6DF;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 210px;
+  height: 210px;
   margin: 0 auto;
   text-align: center;
-  align-items: center;
 }
 
 #cur-temp {
   font-weight: bolder;
   font-size: 28px;
-  text-align: center;
+
   color: #6a8fda;
 }
 #imperial {
@@ -104,6 +104,7 @@ hr {
   border-radius: 10px;
   width: 210px;
   padding: 0px;
+
   text-align: center;
   line-height: normal;
   align-items: center;
@@ -119,7 +120,6 @@ hr {
 
 #hourly i {
   font-size: 28px;
-
   margin-top: 5px;
 }
 
@@ -145,4 +145,5 @@ hr {
   text-align: center;
   display: block;
   margin: 10px auto;
+  font-size: 12px;
 }
