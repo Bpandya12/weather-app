@@ -27,6 +27,7 @@ let month = months[currentDate.getMonth()];
 let date = currentDate.getDate();
 curDateElement.innerHTML = `Today | ${month} ${date}`;
 
+// current temp info
 function displayWeatherCondition(response) {
   console.log(response);
   document.querySelector("#cur-city").innerHTML = response.data.name;
@@ -41,7 +42,7 @@ function displayWeatherCondition(response) {
     response.data.main.temp_min
   );
   document.querySelector("#cur-temp").innerHTML = Math.round(
-    response.data.main.temp
+    fahrenheitTemperature
   );
   document.querySelector("#real-feel").innerHTML = Math.round(
     response.data.main.feels_like
@@ -55,6 +56,8 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  fahrenheitTemperature = response.data.main.temp;
 }
 //format hours for current and hourly times
 function formatHours(timestamp) {
@@ -110,7 +113,31 @@ function handleSubmit(event) {
   search(city);
 }
 
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let celsiusTemperature = (fahrenheitTemperature−32) * 5/9;
+  let curTempElement = document.querySelector("#cur-temp");
+  curTempElement.innerHTML = Math.round(celsiusTemperature);
+  
+}
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let curTempElement = document.querySelector("#cur-temp");
+  curTempElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+
+
+let fahrenheitTemperature = null;
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
+
+let celsiuslink = document.querySelector("#celsius-link");
+celsiuslink.addEventListener("click", displayCelsiusTemperature);
+
+let fahrenheitlink= document.querySelector("#fahrenheit-link")
+fahrenheitlink.addEventListener("click", displayFahrenheitTemperature);
 
 search("New York");
