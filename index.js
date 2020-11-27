@@ -88,9 +88,11 @@ function displayHourlyForecast(response) {
           hourly.weather[0].icon
         }@2x.png"/>
         <br />
-        <small>${Math.round(hourly.main.temp_max)}º / ${Math.round(
+        <small><span class="forecast-max">${Math.round(
+          hourly.main.temp_max
+        )}</span>º /<span class="forecast-min">${Math.round(
       hourly.main.temp_min
-    )}º</small>  
+    )}</span>º</small>  
       </span>
     </div>
   `;
@@ -118,12 +120,36 @@ function displayCelsiusTemperature(event) {
   let celsiusTemperature = Math.round(((fahrenheitTemperature - 32) * 5) / 9);
   let curTempElement = document.querySelector("#cur-temp");
   curTempElement.innerHTML = Math.round(celsiusTemperature);
+  let forecastMax = document.querySelectorAll(".forecast-max");
+  let forecastMin = document.querySelectorAll(".forecast-min");
+
+  forecastMax.forEach(function (item) {
+    let currentTemp = item.innerHTML;
+    item.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
+  });
+
+  forecastMin.forEach(function (item) {
+    let currentTemp = item.innerHTML;
+    item.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
+  });
 }
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let curTempElement = document.querySelector("#cur-temp");
   curTempElement.innerHTML = Math.round(fahrenheitTemperature);
+  let forecastMax = document.querySelectorAll(".forecast-max");
+  let forecastMin = document.querySelectorAll(".forecast-min");
+
+  forecastMax.forEach(function (item) {
+    let currentTemp = item.innerHTML;
+    item.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
+  });
+
+  forecastMin.forEach(function (item) {
+    let currentTemp = item.innerHTML;
+    item.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
+  });
 }
 
 let fahrenheitTemperature = null;

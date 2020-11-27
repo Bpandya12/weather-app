@@ -28,7 +28,7 @@ ul {
   list-style: none;
   font-size: 14px;
   font-style: italic;
-  color: gray;
+  color: whitesmoke;
   padding: 0;
 }
 
@@ -73,7 +73,7 @@ hr {
   font-weight: bolder;
   font-size: 28px;
 
-  color: #6a8fda;
+  color: whitesmoke;
 }
 #imperial {
   font-weight: bolder;
