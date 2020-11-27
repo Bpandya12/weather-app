@@ -120,6 +120,8 @@ function displayCelsiusTemperature(event) {
   let celsiusTemperature = Math.round(((fahrenheitTemperature - 32) * 5) / 9);
   let curTempElement = document.querySelector("#cur-temp");
   curTempElement.innerHTML = Math.round(celsiusTemperature);
+  fahrenheitlink.classList.remove("active");
+  celsiuslink.classList.add("active");
   let forecastMax = document.querySelectorAll(".forecast-max");
   let forecastMin = document.querySelectorAll(".forecast-min");
 
@@ -138,6 +140,9 @@ function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let curTempElement = document.querySelector("#cur-temp");
   curTempElement.innerHTML = Math.round(fahrenheitTemperature);
+  fahrenheitlink.classList.add("active");
+  celsiuslink.classList.remove("active");
+
   let forecastMax = document.querySelectorAll(".forecast-max");
   let forecastMin = document.querySelectorAll(".forecast-min");
 

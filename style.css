@@ -138,3 +138,12 @@ hr {
   font-size: 18px;
   color: #4e78ce;
 }
+
+#imperial .active {
+  color: black;
+  cursor: default;
+}
+
+#imperial .active:hover {
+  text-decoration: none;
+}
