@@ -72,14 +72,17 @@ hr {
 
 #cur-temp {
   font-weight: bolder;
-  font-size: 28px;
+  font-size: 30px;
   color: #4e78ce;
+  text-align: center;
 }
 #imperial {
   font-weight: bolder;
-  font-size: 28px;
+  font-size: 16px;
   text-align: center;
   color: #6a8fda;
+  position: relative;
+  top: -10px;
 }
 
 #cur-weather {
@@ -88,8 +91,8 @@ hr {
 }
 
 #icon {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
 }
 
 .today {
