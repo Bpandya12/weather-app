@@ -90,9 +90,9 @@ function displayHourlyForecast(response) {
         <br />
         <small><span class="forecast-max">${Math.round(
           hourly.main.temp_max
-        )}</span>º /<span class="forecast-min">${Math.round(
+        )}</span>º / <span class="forecast-min">${Math.round(
       hourly.main.temp_min
-    )}</span>º</small>  
+    )}</span>º<small>  
       </span>
     </div>
   `;

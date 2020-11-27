@@ -17,9 +17,10 @@ header i {
 
 h {
   text-align: center;
-  color: #6a8fda;
+  color: #4e78ce;
   letter-spacing: 1px;
   font-family: "Abel", sans-serif;
+  font-weight: bolder;
   font-size: 18px;
   display: block;
 }
@@ -28,7 +29,7 @@ ul {
   list-style: none;
   font-size: 14px;
   font-style: italic;
-  color: whitesmoke;
+  color: #4e78ce;
   padding: 0;
 }
 
@@ -37,9 +38,9 @@ hr {
 }
 
 .container {
-  border: 1px solid;
+  border: 2px solid;
   border-radius: 20px;
-  border-color: lightblue;
+  border-color: #6fabd6;
   padding: 10px;
   margin: 25px 25px 0px 25px;
   width: 620px;
@@ -61,7 +62,7 @@ hr {
 }
 
 .cur-temp {
-  border: 2px solid#7DB6DF;
+  border: 2.5px solid#6fabd6;
   border-radius: 50%;
   width: 210px;
   height: 210px;
@@ -72,8 +73,7 @@ hr {
 #cur-temp {
   font-weight: bolder;
   font-size: 28px;
-
-  color: whitesmoke;
+  color: #4e78ce;
 }
 #imperial {
   font-weight: bolder;
@@ -93,11 +93,10 @@ hr {
 }
 
 .today {
-  border: 2px solid #7db6df;
+  border: 2px solid #6fabd6;
   border-radius: 10px;
   width: 210px;
   padding: 0px;
-
   text-align: center;
   line-height: normal;
   align-items: center;
@@ -106,14 +105,12 @@ hr {
 #hourly {
   padding: 15px 20px 20px;
   text-align: center;
-
   left: 50px;
   font-size: 14px;
 }
-
-#hourly i {
-  font-size: 28px;
-  margin-top: 5px;
+.col-2 {
+  background-color: #d2c7d4;
+  padding-top: 5px;
 }
 
 #weekly-forecast {
@@ -130,13 +127,14 @@ hr {
   margin-top: 5px;
 }
 
-.col-2 {
-  margin-right: 5px auto;
-}
-
 .open-source {
   text-align: center;
   display: block;
   margin: 10px auto;
   font-size: 12px;
+}
+
+#cur-city {
+  font-size: 18px;
+  color: #4e78ce;
 }
