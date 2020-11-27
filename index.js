@@ -134,6 +134,9 @@ function displayCelsiusTemperature(event) {
     let currentTemp = item.innerHTML;
     item.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
   });
+
+  celsiuslink.removeEventListener("click", displayCelsiusTemperature);
+  fahrenheitlink.addEventListener("click", displayFahrenheitTemperature);
 }
 
 function displayFahrenheitTemperature(event) {
@@ -155,6 +158,9 @@ function displayFahrenheitTemperature(event) {
     let currentTemp = item.innerHTML;
     item.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
   });
+
+  celsiuslink.addEventListener("click", displayCelsiusTemperature);
+  fahrenheitlink.removeEventListener("click", displayFahrenheitTemperature);
 }
 
 let fahrenheitTemperature = null;
