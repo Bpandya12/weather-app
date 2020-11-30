@@ -151,12 +151,12 @@ function displayFahrenheitTemperature(event) {
 
   forecastMax.forEach(function (item) {
     let currentTemp = item.innerHTML;
-    item.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
+    item.innerHTML = Math.round(((currentTemp * 9)/ 5 + 32);
   });
 
   forecastMin.forEach(function (item) {
     let currentTemp = item.innerHTML;
-    item.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
+    item.innerHTML = Math.round(((currentTemp * 9)/ 5 + 32);
   });
 
   celsiuslink.addEventListener("click", displayCelsiusTemperature);
